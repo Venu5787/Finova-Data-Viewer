@@ -115,8 +115,6 @@ The system architecture diagram shows:
 - Database
 - Flow of data between components
 
-📁 Diagram file:
-
 ![Architecture Diagram](diagrams/diagram.svg)
 
 ---
