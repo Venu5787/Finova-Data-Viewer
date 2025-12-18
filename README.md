@@ -122,7 +122,9 @@ The system architecture diagram shows:
 ## 4️⃣ Screenshots
 
 ### 🔹 UI Screenshot
-![UI Screenshot](diagrams/Screenshot_2025-12-18_200435.png)
+![UI Screenshot](/diagrams/Screenshot_2025-12-18_200435.png)
+
+
 
 ---
 
