@@ -1,0 +1,36 @@
+<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Client -->
+  <rect x="40" y="100" width="160" height="80" rx="10" ry="10"
+        fill="#d6eaf8" stroke="#2e86c1" stroke-width="2"/>
+  <text x="120" y="145" font-size="16" text-anchor="middle" fill="#154360">
+    Client (Browser UI)
+  </text>
+
+  <!-- Server -->
+  <rect x="270" y="100" width="160" height="80" rx="10" ry="10"
+        fill="#d5f5e3" stroke="#239b56" stroke-width="2"/>
+  <text x="350" y="145" font-size="16" text-anchor="middle" fill="#145a32">
+    Server (Backend)
+  </text>
+
+  <!-- Database -->
+  <rect x="500" y="100" width="160" height="80" rx="10" ry="10"
+        fill="#fdebd0" stroke="#ca6f1e" stroke-width="2"/>
+  <text x="580" y="145" font-size="16" text-anchor="middle" fill="#7e5109">
+    Database
+  </text>
+
+  <!-- Arrows -->
+  <line x1="200" y1="140" x2="270" y2="140" stroke="#000" stroke-width="2"/>
+  <polygon points="270,140 260,135 260,145" fill="#000"/>
+
+  <line x1="430" y1="140" x2="500" y2="140" stroke="#000" stroke-width="2"/>
+  <polygon points="500,140 490,135 490,145" fill="#000"/>
+
+  <!-- Labels -->
+  <text x="235" y="120" font-size="12" text-anchor="middle">Request</text>
+  <text x="465" y="120" font-size="12" text-anchor="middle">Query</text>
+
+  <text x="235" y="170" font-size="12" text-anchor="middle">Response</text>
+  <text x="465" y="170" font-size="12" text-anchor="middle">Data</text>
+</svg>
