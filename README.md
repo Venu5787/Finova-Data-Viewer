@@ -129,8 +129,9 @@ The system architecture diagram shows:
 ---
 
 ### 🔹 Git Commands Screenshot
-<img width="801" height="484" alt="image" src="https://github.com/user-attachments/assets/4954878b-ba03-4152-8771-5652fa5e1874" />
+
 <img width="1306" height="161" alt="image" src="https://github.com/user-attachments/assets/3602601c-8d73-4869-b4d3-22866d998520" />
+<img width="801" height="484" alt="image" src="https://github.com/user-attachments/assets/4954878b-ba03-4152-8771-5652fa5e1874" />
 
 
 
