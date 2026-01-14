@@ -71,10 +71,15 @@ UI Update (DOM + Chart.js)
 
 ## 📸 Screenshots
 
-The following screenshots are included in the repository:
+### Application UI
+![Application UI](screenshots/1.png)
 
-- Application UI
-- Chart output
+### Cryptocurrency Chart
+![Cryptocurrency Chart](screenshots/2.png)
+
+### Stock Chart
+![Stock Chart](screenshots/3.png)
+
 
 ---
 
@@ -198,4 +203,5 @@ The payment gateway section provides a conceptual understanding of how secure on
 - Deployed using **Vercel**
 
 ---
+
 
