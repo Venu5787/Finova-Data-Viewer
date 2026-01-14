@@ -52,25 +52,7 @@ Below are placeholders for required screenshots. Please open `Index.html` in you
 - UI screenshot placeholder: `screenshots/ui_screenshot.png`
 - Git commands screenshot placeholder: `screenshots/git_commands.png`
 
-Sample git commands to run locally (use your terminal):
 
-```bash
-git add README.md diagrams/diagram.svg screenshots/ui_screenshot.png screenshots/git_commands.png
-git commit -m "Add README, diagram and screenshot placeholders"
-git push origin main
-```
 
-How to capture screenshots (quick steps):
 
-1. Open `Index.html` in your browser (double-click or use `Live Server`).
-2. Take a screenshot of the browser window showing the UI and save as `screenshots/ui_screenshot.png`.
-3. In a terminal, run the three git commands (`git add`, `git commit`, `git push`) and take a screenshot of the terminal showing these commands and their success output. Save as `screenshots/git_commands.png`.
-4. Replace the placeholder files in this repo and run the sample git commands above to include them in version control.
 
-Notes & next steps
-
-- I created a simple diagram file `diagrams/diagram.svg`. Replace the screenshots with real captures so the README displays them.
-- If you want, I can run the `git add`/`commit` locally here and push, but I need repository remote credentials or confirmation to proceed.
-
----
-Generated on December 18, 2025.
