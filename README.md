@@ -1,58 +1,200 @@
-# Finova Data Viewer — Project Report
+# 📊 Finova Data Viewer
 
-Summary of contents and quick steps
+Finova Data Viewer is a frontend web application built using **Vite + Vanilla JavaScript**.  
+It fetches **live stock market** and **cryptocurrency data**, updates the UI dynamically using **DOM manipulation**, and visualizes price history using **Chart.js**.
 
-- Steps taken:
-  1. Create a short report README with client-server explanations and diagram.
-  2. Provide a diagram file at `diagrams/diagram.svg`.
-  3. Add placeholders for screenshots; please replace with real screenshots.
+---
 
-**1. Client–Server Model**
+## 🔧 Tech Stack
 
-- **What is a client?**
-  A client is the software (usually running in a browser or mobile app) that a user interacts with. It displays the UI and sends requests to the server.
+- Vite  
+- Vanilla JavaScript  
+- HTML & CSS (reused from Task 1)  
+- Chart.js (used only for charts)  
+- Git & GitHub  
+- Vercel (deployment)
 
-- **What is a server?**
-  A server is the program (running on a remote or local machine) that receives requests from clients, processes them (business logic), optionally reads/writes a database, and returns responses.
+---
 
-- **How do they communicate?**
-  Clients and servers communicate over a network using requests and responses (commonly HTTP/HTTPS). The client makes a request (e.g., GET/POST) and the server responds with data (often JSON, HTML, or files).
+## 🎯 Project Objectives
 
-- **What happens internally when a user clicks “Search” in the UI?**
-  1. The frontend captures the click and reads the search input.
-  2. It sends a request (e.g., HTTP POST/GET) to the server API endpoint with the search parameters.
-  3. The server receives the request, validates parameters, and executes search logic.
-  4. The server queries the database for matching records.
-  5. The database returns results to the server.
-  6. The server formats the results (e.g., JSON) and returns an HTTP response.
-  7. The client receives the response, parses it, and updates the UI to show results.
+- Fetch live stock and cryptocurrency data
+- Update UI dynamically without page reload
+- Show price history using charts
+- Handle errors inside the UI
+- Deploy the project using Vercel
 
-**2. How Full-Stack Applications Work (simple words)**
+---
 
-- **Frontend:** The part users interact with (web pages, forms, buttons). It runs in the browser and handles presentation and user events.
+## 🧠 DOM Manipulation in This Project
 
-- **Backend:** The server-side code that implements business rules, processes requests, performs authentication, and coordinates data access.
+DOM manipulation is used to update the UI dynamically based on user actions and API responses.
 
-- **Database:** A storage system (like PostgreSQL, MySQL, MongoDB) where persistent data is kept. The backend queries and updates the database.
+- User input is read without reloading the page
+- JavaScript fetches data from APIs
+- Stock and crypto prices are injected into the DOM
+- Price changes are styled dynamically:
+  - Green for positive change
+  - Red for negative change
+- Charts are updated dynamically using Chart.js
+- Errors are displayed inside the UI (no alerts used)
 
-- **APIs (concept):** An API is an agreed way for the frontend and backend to exchange data (endpoints with request/response formats). It defines what requests are accepted and what responses look like.
+---
 
-- **How they talk:** The frontend calls API endpoints on the backend (HTTP requests). The backend uses a database driver or ORM to query the database. Results flow back to the frontend via the API.
+## 🔄 Data Flow: User Input → API → UI Update
 
-**3. Diagram**
+1. User enters a stock symbol or cryptocurrency name
+2. JavaScript reads the input
+3. API request is sent using `fetch()`
+4. API responds with market data
+5. JavaScript processes the data
+6. DOM updates price values and charts
 
-The diagram file is included at `diagrams/diagram.svg`. It shows the client, server, database and data flow.
-
-![Architecture Diagram](diagrams/diagram.svg)
-
-**4. Screenshots**
-
-Below are placeholders for required screenshots. Please open `Index.html` in your browser, take the screenshots, and replace the placeholder files:
-
-- UI screenshot placeholder: `screenshots/ui_screenshot.png`
-- Git commands screenshot placeholder: `screenshots/git_commands.png`
-
-
-
+### Simple Flow Diagram
+User Input → JavaScript → External API → DOM Update → Chart Update
 
 
+---
+
+## 🏗️ Application Architecture
+
+Client (Browser)
+↓
+Frontend (HTML + CSS + JavaScript)
+↓
+External APIs (Stock / Crypto)
+↓
+UI Update (DOM + Chart.js)
+
+
+---
+
+## 📸 Screenshots
+
+The following screenshots are included in the repository:
+
+- Application UI
+- Chart output
+
+---
+
+# 📘 Task 2.2: Payment Gateway Architecture Report
+---
+
+## 1️⃣ What is a Payment Gateway?
+
+A **payment gateway** is a service that enables online applications to securely process payments by transferring payment information between the customer, merchant, and bank.
+
+### Why Payment Gateways Are Required
+- Secure handling of sensitive payment data
+- Authorization and verification of transactions
+- Fraud prevention
+- Compliance with banking standards
+
+### Real-World Example
+**Razorpay** – widely used in India for online payments.
+
+---
+
+## 2️⃣ Components Involved
+
+### User / Customer
+Initiates the payment by clicking the “Pay Now” button.
+
+### Frontend (Website / Application)
+Collects payment details and sends requests to the backend.
+
+### Backend (Server)
+Processes payment requests securely and communicates with the payment gateway.
+
+### Payment Gateway
+Encrypts and forwards payment information to the bank or card network.
+
+### Bank / Card Network
+Approves or rejects the transaction.
+
+---
+
+## 3️⃣ Payment Flow (Step-by-Step)
+
+1. User clicks “Pay Now”
+2. Frontend sends payment request to backend
+3. Backend sends request to payment gateway
+4. Payment gateway communicates with the bank
+5. Bank approves or rejects the payment
+6. Payment status is returned to the frontend
+7. UI displays success or failure message
+
+---
+
+## 4️⃣ Payment Gateway Architecture
+
+### Why Frontend Alone Cannot Handle Payments
+- Frontend code is visible to users
+- Exposes sensitive payment details
+- Not secure for handling transactions
+
+### Why a Backend Server is Mandatory
+- Protects secret API keys
+- Handles validation and verification
+- Ensures secure payment processing
+
+### Role of APIs
+APIs enable secure communication between frontend, backend, payment gateway, and bank.
+
+---
+
+## 5️⃣ Payment Gateway Architecture Diagram
+User
+↓
+Frontend Application
+↓
+Backend Server
+↓
+Payment Gateway
+↓
+Bank / Card Network
+↑
+Payment Status Response
+
+---
+
+## 6️⃣ Security Concepts
+
+- Payment data must be secured to prevent fraud
+- Sensitive information must never be stored on the frontend
+- Insecure payment handling can lead to data theft and financial loss
+
+---
+
+## 7️⃣ Relation to This Project
+
+### API Usage in Finova Data Viewer
+- Uses APIs to fetch live stock and cryptocurrency data
+
+### API Usage in Payment Gateways
+- Uses APIs to securely process payments
+
+### Similarity
+Both market data APIs and payment gateway APIs:
+- Use request–response communication
+- Provide real-time data
+- Require secure handling of information
+
+---
+
+## ✅ Conclusion
+
+This project demonstrates the use of **DOM manipulation**, **API integration**, and **data visualization** in a frontend application.  
+The payment gateway section provides a conceptual understanding of how secure online payment systems work.
+
+---
+
+## 🚀 Deployment
+
+- Framework Preset: **Vite**
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Deployed using **Vercel**
+
+---
