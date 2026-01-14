@@ -2,44 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Finova Data Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finova Market Data Viewer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
-
     <div class="container">
-        <!-- Heading -->
-        <h1>Finova Data Viewer</h1>
-
+        <h1>Finova Market Data Viewer</h1>
+        
         <!-- Search Section -->
         <div class="search-section">
-            <input 
-                type="text" 
-                placeholder="Enter Stock Symbol or Cryptocurrency Name"
-            >
-            <button>Search</button>
-        </div>
-
-        <!-- Data Display Section -->
-        <div class="data-section">
-            <!-- Stock Container -->
-            <div class="box">
-                <h2>Stock Information</h2>
-                <p class="placeholder">
-                    Stock data will be displayed here.
-                </p>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput"
+                    placeholder="Enter Stock Symbol (e.g., AAPL) or Cryptocurrency (e.g., bitcoin)"
+                >
+                <button id="searchBtn">Search</button>
             </div>
-
-            <!-- Crypto Container -->
-            <div class="box">
-                <h2>Cryptocurrency Information</h2>
-                <p class="placeholder">
-                    Cryptocurrency data will be displayed here.
-                </p>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="stocks">Stocks</button>
+                <button class="tab-btn" data-tab="crypto">Cryptocurrency</button>
             </div>
         </div>
+
+        <!-- Stock Data Section -->
+        <div id="stocks" class="tab-content active">
+            <div class="box">
+                <h2>Stock Information - <span id="stockSymbol"></span></h2>
+                <div class="data-display">
+                    <div class="price-info">
+                        <div class="price" id="stockPrice">--</div>
+                        <div class="change" id="stockChange">--</div>
+                        <div class="last-updated" id="stockLastUpdated">Last updated: --</div>
+                    </div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <span>Open:</span>
+                            <span id="stockOpen">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>High:</span>
+                            <span id="stockHigh">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Low:</span>
+                            <span id="stockLow">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Volume:</span>
+                            <span id="stockVolume">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="stockChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crypto Data Section -->
+        <div id="crypto" class="tab-content">
+            <div class="box">
+                <h2>Cryptocurrency Information - <span id="cryptoSymbol"></span></h2>
+                <div class="data-display">
+                    <div class="price-info">
+                        <div class="price" id="cryptoPrice">--</div>
+                        <div class="change" id="cryptoChange">--</div>
+                        <div class="last-updated" id="cryptoLastUpdated">Last updated: --</div>
+                    </div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <span>24h High:</span>
+                            <span id="cryptoHigh">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>24h Low:</span>
+                            <span id="cryptoLow">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>24h Volume:</span>
+                            <span id="cryptoVolume">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Market Cap:</span>
+                            <span id="cryptoMarketCap">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="cryptoChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message"></div>
     </div>
 
+    <script type="module" src="./main.js"></script>
 </body>
 </html>

@@ -1,0 +1,19 @@
+{
+  "name": "finova_data_viewer",
+  "version": "1.0.0",
+  "description": "Summary of contents and quick steps",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "vite": "^7.3.1"
+  }
+}

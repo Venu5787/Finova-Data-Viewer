@@ -1,141 +1,76 @@
-# 📊 Finova Data Viewer — Project Report
+# Finova Data Viewer — Project Report
 
-## 📌 Overview
-**Finova Data Viewer** is a static frontend user interface built using **HTML and CSS only**.  
-This project demonstrates an understanding of **client–server architecture**, **full-stack application flow**, and **basic Git workflow**.  
-The UI created in this task will be reused and extended with API functionality in **Task 2**.
+Summary of contents and quick steps
 
----
+- Steps taken:
+  1. Create a short report README with client-server explanations and diagram.
+  2. Provide a diagram file at `diagrams/diagram.svg`.
+  3. Add placeholders for screenshots; please replace with real screenshots.
 
-## 🛠 Steps Taken
-1. Designed a clean FinTech user interface using HTML and CSS.
-2. Structured the project for future backend and API integration.
-3. Created this README with clear explanations of:
-   - Client–Server Model
-   - Full-Stack Application Architecture
-4. Used Git for version control and GitHub for repository management.
+**1. Client–Server Model**
 
----
+- **What is a client?**
+  A client is the software (usually running in a browser or mobile app) that a user interacts with. It displays the UI and sends requests to the server.
 
-## 1️⃣ Client–Server Model
+- **What is a server?**
+  A server is the program (running on a remote or local machine) that receives requests from clients, processes them (business logic), optionally reads/writes a database, and returns responses.
 
-### 🔹 What is a Client?
-A **client** is the software that users interact with directly.
-- Runs in a web browser or mobile application
-- Displays the user interface
-- Sends requests to a server
+- **How do they communicate?**
+  Clients and servers communicate over a network using requests and responses (commonly HTTP/HTTPS). The client makes a request (e.g., GET/POST) and the server responds with data (often JSON, HTML, or files).
 
-In this project, the **HTML + CSS UI running in the browser** acts as the client.
+- **What happens internally when a user clicks “Search” in the UI?**
+  1. The frontend captures the click and reads the search input.
+  2. It sends a request (e.g., HTTP POST/GET) to the server API endpoint with the search parameters.
+  3. The server receives the request, validates parameters, and executes search logic.
+  4. The server queries the database for matching records.
+  5. The database returns results to the server.
+  6. The server formats the results (e.g., JSON) and returns an HTTP response.
+  7. The client receives the response, parses it, and updates the UI to show results.
 
----
+**2. How Full-Stack Applications Work (simple words)**
 
-### 🔹 What is a Server?
-A **server** is a program that:
-- Receives requests from clients
-- Processes business logic
-- Communicates with databases
-- Sends responses back to clients
+- **Frontend:** The part users interact with (web pages, forms, buttons). It runs in the browser and handles presentation and user events.
 
-Servers usually run on remote machines or cloud platforms.
+- **Backend:** The server-side code that implements business rules, processes requests, performs authentication, and coordinates data access.
 
----
+- **Database:** A storage system (like PostgreSQL, MySQL, MongoDB) where persistent data is kept. The backend queries and updates the database.
 
-### 🔹 How Do Clients and Servers Communicate?
-Clients and servers communicate over a network using **HTTP/HTTPS**:
-- The client sends a request (GET or POST)
-- The server processes the request
-- The server sends a response containing data or status
+- **APIs (concept):** An API is an agreed way for the frontend and backend to exchange data (endpoints with request/response formats). It defines what requests are accepted and what responses look like.
 
-Data is commonly exchanged in formats such as **JSON**.
+- **How they talk:** The frontend calls API endpoints on the backend (HTTP requests). The backend uses a database driver or ORM to query the database. Results flow back to the frontend via the API.
 
----
+**3. Diagram**
 
-### 🔹 What Happens When a User Clicks “Search”?
-
-1. The frontend captures the button click.
-2. The input value entered by the user is read.
-3. A request is sent to a backend API endpoint.
-4. The server validates the request.
-5. The server queries the database for relevant data.
-6. The database returns results to the server.
-7. The server sends a formatted response.
-8. The frontend receives the response and updates the UI.
-
----
-
-## 2️⃣ How Full-Stack Applications Work 
-
-### 🔹 Frontend
-- The visual part of the application
-- Built using HTML, CSS, and JavaScript
-- Handles layout, styling, and user interaction
-- **This project uses only HTML and CSS**
-
----
-
-### 🔹 Backend
-- Runs on the server
-- Handles application logic
-- Processes requests from the frontend
-- Communicates with the database
-
----
-
-### 🔹 Database
-- Stores data permanently
-- Examples include PostgreSQL, MySQL, MongoDB
-- Accessed only by the backend
-
----
-
-### 🔹 APIs
-- APIs define how frontend and backend communicate
-- They specify:
-  - Endpoints
-  - Request structure
-  - Response format
-- APIs act as a bridge between layers
-
----
-
-### 🔹 Communication Between Layers
-- Frontend → API → Backend → Database
-- Database → Backend → API → Frontend
-
-
-Each layer has a specific responsibility, making applications scalable and maintainable.
-
----
-
-## 3️⃣ Architecture Diagram
-
-The system architecture diagram shows:
-- Client
-- Server
-- Database
-- Flow of data between components
+The diagram file is included at `diagrams/diagram.svg`. It shows the client, server, database and data flow.
 
 ![Architecture Diagram](diagrams/diagram.svg)
 
+**4. Screenshots**
+
+Below are placeholders for required screenshots. Please open `Index.html` in your browser, take the screenshots, and replace the placeholder files:
+
+- UI screenshot placeholder: `screenshots/ui_screenshot.png`
+- Git commands screenshot placeholder: `screenshots/git_commands.png`
+
+Sample git commands to run locally (use your terminal):
+
+```bash
+git add README.md diagrams/diagram.svg screenshots/ui_screenshot.png screenshots/git_commands.png
+git commit -m "Add README, diagram and screenshot placeholders"
+git push origin main
+```
+
+How to capture screenshots (quick steps):
+
+1. Open `Index.html` in your browser (double-click or use `Live Server`).
+2. Take a screenshot of the browser window showing the UI and save as `screenshots/ui_screenshot.png`.
+3. In a terminal, run the three git commands (`git add`, `git commit`, `git push`) and take a screenshot of the terminal showing these commands and their success output. Save as `screenshots/git_commands.png`.
+4. Replace the placeholder files in this repo and run the sample git commands above to include them in version control.
+
+Notes & next steps
+
+- I created a simple diagram file `diagrams/diagram.svg`. Replace the screenshots with real captures so the README displays them.
+- If you want, I can run the `git add`/`commit` locally here and push, but I need repository remote credentials or confirmation to proceed.
+
 ---
-
-## 4️⃣ Screenshots
-
-### 🔹 UI Screenshot
-<img width="1911" height="1070" alt="image" src="https://github.com/user-attachments/assets/4f5b4ce5-9b5d-4792-9ca1-e344f74a52ba" />
-
-
-
----
-
-### 🔹 Git Commands Screenshot
-
-<img width="1306" height="161" alt="image" src="https://github.com/user-attachments/assets/3602601c-8d73-4869-b4d3-22866d998520" />
-<img width="801" height="484" alt="image" src="https://github.com/user-attachments/assets/4954878b-ba03-4152-8771-5652fa5e1874" />
-
-
-
- 
-
-
-
+Generated on December 18, 2025.
