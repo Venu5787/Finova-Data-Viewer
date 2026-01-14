@@ -72,13 +72,13 @@ UI Update (DOM + Chart.js)
 ## 📸 Screenshots
 
 ### Application UI
-![Application UI](screenshots/1.jpeg)
+![Application UI](diagrams/1.jpeg)
 
 ### Cryptocurrency Chart
-![Cryptocurrency Chart](screenshots/2.jpeg)
+![Cryptocurrency Chart](diagrams/2.jpeg)
 
 ### Stock Chart
-![Stock Chart](screenshots/3.jpeg)
+![Stock Chart](diagrams/3.jpeg)
 
 
 ---
@@ -203,6 +203,7 @@ The payment gateway section provides a conceptual understanding of how secure on
 - Deployed using **Vercel**
 
 ---
+
 
 
 
