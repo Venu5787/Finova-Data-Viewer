@@ -115,7 +115,7 @@ Approves or rejects the transaction.
 
 ---
 
-## 3️⃣ Payment Flow (Step-by-Step)
+## 3️⃣ Payment Flow 
 
 1. User clicks “Pay Now”
 2. Frontend sends payment request to backend
@@ -198,3 +198,4 @@ The payment gateway section provides a conceptual understanding of how secure on
 - Deployed using **Vercel**
 
 ---
+
